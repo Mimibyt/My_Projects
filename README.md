@@ -1,0 +1,32 @@
+with open("testevazio.log", "r", encoding="utf-8") as arquivo:
+    linhas = arquivo.readlines()
+
+encontradas_error = []
+encontradas_success = []
+
+print("Analisando o arquivo de log...")
+
+
+def analisar():
+    for numero, linha in enumerate(linhas, start=1):
+        if "falha ao conectar ao servidor" in linha.lower():
+            encontradas_error.append((numero, linha.strip()))
+        if "usuário autenticado com sucesso" in linha.lower():
+            encontradas_success.append((numero, linha.strip()))
+
+
+analisar()
+
+if encontradas_error:
+    print(f"{len(encontradas_error)} falha(s) de conexão encontrada(s):")
+    for numero, linha in encontradas_error:
+        print(f"Linha {numero}: {linha}")
+else:
+        print("Nenhuma falha de conexão encontrada.")
+
+if encontradas_success:        
+    print(f"{len(encontradas_success)} Usuário(s) autenticado(s) com sucesso.")
+    for numero, linha in encontradas_success:
+        print(f"Linha {numero}: {linha}")
+else:
+        print("Nenhum usuário autenticado com sucesso encontrado.")
