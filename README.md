@@ -51,4 +51,88 @@ Autor
 
 Micael Alves Barbosa Estudante de Análise e Desenvolvimento de Sistemas, em busca da primeira oportunidade em Help Desk / Suporte Técnico.
 
+
+/........................................................................................................................................../
+
+# 🛒 Terminal Store: Stock Lookup & Shopping Cart
+
+A simple command-line store written in **Python**. The user searches for products, adds them to a cart, and gets a purchase summary at the end. Stock is only updated when the purchase is finalized.
+
+> Note: the program's messages are displayed in Brazilian Portuguese.
+
+## Features
+
+- Search for a product by name (case-insensitive)
+- Shows price and available quantity
+- Shopping cart: buy multiple items in a single session
+- Input validation:
+  - Rejects zero, negative, and non-numeric quantities
+  - Rejects quantities above the available stock
+  - Accounts for items already in the cart, so stock can't be exceeded across multiple additions
+- Final summary with subtotal per item and total
+- Stock is deducted only at checkout
+
+## Concepts practiced
+
+- Nested dictionaries
+- `while True` loops with `break` and `continue`
+- Conditionals and input validation
+- Error handling with `try/except`
+- f-string formatting
+
+## Requirements
+
+- Python 3.8 or higher
+- No external libraries
+
+## How to run
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+cd YOUR-REPOSITORY
+python main.py
+```
+
+Type the product name to add it to the cart, and `fim` to finish the purchase.
+
+## Example
+
+```
+Digite o nome do produto para comprar ou 'fim' para finalizar.
+
+Qual produto você está procurando? cafe
+Preço: R$18.50 (100 disponíveis). Quantas unidades? 2
+2x cafe adicionado ao carrinho.
+
+Qual produto você está procurando? pao
+Preço: R$6.00 (50 disponíveis). Quantas unidades? 5
+5x pao adicionado ao carrinho.
+
+Qual produto você está procurando? fim
+
+=== RESUMO DA COMPRA ===
+2x cafe       R$ 18.50  =  R$  37.00
+5x pao        R$  6.00  =  R$  30.00
+------------------------------------
+TOTAL: R$67.00
+```
+
+## Available products
+
+`cafe`, `pao`, `leite`, `ovos`, `manteiga`, `queijo`, `presunto`
+
+## Possible improvements
+
+- [ ] Split the code into functions (`search_product`, `add_to_cart`, `show_summary`)
+- [ ] Add a command to list all available products
+- [ ] Remove items from the cart before checkout
+- [ ] Persist stock in a JSON file so it survives between runs
+- [ ] Add unit tests
+
+## Author
+
+**Micael Alves Barbosa**
+Systems Analysis and Development graduate, looking for opportunities in Technical Support / Help Desk.
+
+[LinkedIn](https://www.linkedin.com/in/micael-barbosa-aa50b9332/) · [GitHub](https://github.com/YOUR-USERNAME)
 LinkedIn
