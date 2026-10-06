@@ -134,5 +134,5 @@ TOTAL: R$67.00
 **Micael Alves Barbosa**
 Systems Analysis and Development graduate, looking for opportunities in Technical Support / Help Desk.
 
-[LinkedIn](https://www.linkedin.com/in/micael-barbosa-aa50b9332/) · [GitHub](https://github.com/YOUR-USERNAME)
+[LinkedIn](https://www.linkedin.com/in/micael-barbosa-aa50b9332/) · [GitHub](https://github.com/Mimibyt)
 LinkedIn
